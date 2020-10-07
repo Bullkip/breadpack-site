@@ -1,0 +1,47 @@
+//Transition
+@mixin tr($property, $time: .5s) {
+	transition: $property $time linear;
+}
+
+// Centre Position
+@mixin myPos($top: 50%, $left: 50%, $tx: -50%, $ty: -50%) {
+	position: absolute;
+	top: $top;
+	left: $left;
+	transform: translate($tx, $ty);
+}
+
+// Mobile first
+$mediaWidthMobile: 320px;
+$mediaWidthTablet: 768px;
+$mediaWidthTabletHorizontal: 1024px;
+$mediaWidthLaptop: 1366px;
+
+//Media queries
+@mixin media-tablet {
+
+	@media (min-width: $mediaWidthTablet) {
+		@content;
+	}
+}
+
+@mixin media-tablet-horizontal {
+
+	@media (min-width: $mediaWidthTabletHorizontal) {
+		@content;
+	}
+}
+
+@mixin media-laptop {
+
+	@media (min-width: $mediaWidthLaptop) {
+		@content;
+	}
+}
+
+@mixin media-mobile($mediaWidthMobile) {
+
+	@media (min-width: $mediaWidthMobile) {
+		@content;
+	}
+}
