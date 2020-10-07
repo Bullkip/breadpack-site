@@ -23,12 +23,13 @@ function playPauseMedia() {
     if (media.paused) {
         play.setAttribute('data-icon', 'u');
         play.classList.toggle('pause');
-        controls.classList.add('video__controls-disable');
+        controls.classList.toggle('video__controls-disable');
 
         media.play();
     } else {
         play.setAttribute('data-icon', 'P');
         play.classList.toggle('pause');
+         controls.classList.toggle('video__controls-disable');
         media.pause();
     }
 }
