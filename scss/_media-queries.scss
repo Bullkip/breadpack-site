@@ -3,6 +3,12 @@
 @include mq('desctop-wide') {}
 
 @include mq('desktop', max) {
+    .first {
+        &__img {
+            transform: scale(.80);
+        }
+    }
+
     .photo-breadpack {
         transform: scale(0.85);
 
@@ -53,7 +59,18 @@
     .use {
         &__wrap-content {
             padding: 60px 0 60px 15px;
+
+            &-text {
+                max-width: 70%;
+                min-width: 40%;
+
+                h3 {
+                    font-size: 24px;
+                    line-height: 28px;
+                }
+            }
         }
+
         &__wrap-text {
             h3 {
                 font-style: normal;
@@ -62,8 +79,13 @@
                 line-height: 28px;
             }
         }
+
+        &__board {
+            left: -9%;
+        }
+
         &__description {
-           
+
             font-size: 16px;
             line-height: 19px;
         }
@@ -71,9 +93,121 @@
 
 }
 
-@include mq('tablet-wide') {}
+@include mq('tablet-wide', max) {
+    .use {
+        &__wrap-content {
 
-@include mq('tablet') {}
+
+            &-text {
+                max-width: 70%;
+                min-width: 40%;
+            }
+        }
+
+        &__item {
+            &:nth-child(even) {
+                padding-left: 75px;
+
+            }
+
+            &:last-child {
+                margin: 0 -80px 0 0;
+            }
+        }
+    }
+}
+
+@include mq('tablet', max) {
+
+    .container__main-content {
+        max-width: 720px;
+
+    }
+
+    .header-nav {
+        &__logo {
+            margin: 0;
+        }
+
+        &__items {
+            display: none;
+        }
+
+        &__col {
+            &:nth-child(2) {
+                flex-basis: 88%;
+                justify-content: space-between;
+            }
+        }
+
+        &__tel {
+            a.links {
+                display: none;
+            }
+        }
+
+        &__icon {
+            margin: 0;
+        }
+
+        &__burger {
+            display: inline-block;
+        }
+    }
+
+    .first {
+        h1 {
+            max-width: 60%;
+            font-weight: 500;
+            font-size: 30px;
+            line-height: 35px;
+        }
+
+        &__img {
+            img {
+                transform: scale(.85);
+                left: -3%;
+            }
+
+            svg {}
+        }
+
+        &__wrap-breadpack {
+            margin: -20% -10% 0 0;
+        }
+
+        &__keywords {
+            top: 70%;
+            left: 28%;
+        }
+
+        &__keyword {
+
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4) {
+                margin-left: 0;
+            }
+
+            &:nth-child(3),
+            &:nth-child(4) {
+                position: absolute;
+
+            }
+
+            &:nth-child(3) {
+                top: 0%;
+                left: 40%;
+            }
+
+            &:nth-child(4) {
+                bottom: 0%;
+                left: 40%;
+            }
+        }
+    }
+}
 
 @include mq('tablet-small') {}
 

@@ -1,12 +1,12 @@
-// document.addEventListener('DOMContentLoaded', function () {
-//     new Splide('#image-slider' , {
-//         	type: 'loop',
-//             padding: {
-//                 right: '5rem',
-//                 left: '5rem',
-//         	    },
-//     }).mount();
-// });
+let burger = document.querySelector('.header-nav__burger');
+let menu = document.querySelector('.header-nav__items--small');
+burger.addEventListener('click', burgerMenu);
+
+function burgerMenu() {
+    burger.classList.toggle('header-nav__burger-open');
+    menu.classList.toggle('header-nav__items--open');
+};
+
 
 
 // let currentSlide = document.querySelector('#image-slider')
@@ -77,3 +77,4 @@ function setTime() {
 //             }
 //         }
 // });
+
