@@ -1,6 +1,11 @@
 // Media queries
 
-@include mq('desctop-wide') {}
+@include mq('desktop-wide', max) {
+    main.container {
+        max-width: 100%;
+    }
+    
+}
 
 @include mq('desktop', max) {
     .first {
@@ -207,6 +212,42 @@
             }
         }
     }
+
+    .advantages {
+        h2 {
+            text-align: left;
+        }
+        &__wrap {
+            max-width: 585px;
+            margin-left: auto;
+                padding: 60px 15px 60px 0;
+        }
+
+        &__items {
+            display: block;
+        }
+        &__item {
+            margin-bottom: 40px;
+        }
+        &__icon {
+            max-width: 90px;
+            max-height: 90px;
+            margin-right: 25px;
+        }
+        &__description {
+            max-width: 58%;
+           font-size: 16px;
+           line-height: 19px;
+           flex-basis: 59%;
+        }
+        &__photo-field {
+            max-width: unset;
+            height: unset;
+            bottom: -3%;
+            left: -23%;
+        }
+    }
+
 }
 
 @include mq('tablet-small') {}
