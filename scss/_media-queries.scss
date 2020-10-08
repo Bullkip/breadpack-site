@@ -1,0 +1,84 @@
+// Media queries
+
+@include mq('desctop-wide') {}
+
+@include mq('desktop', max) {
+    .photo-breadpack {
+        transform: scale(0.85);
+
+        &__advantages {
+            right: -5%;
+            bottom: -28%;
+        }
+
+        // &__use {
+        //     &:nth-child(2) {
+
+        //         top: -10%;
+        //         left: 24%;
+
+        //         // transform: rotate(29.3deg);
+        //     }
+
+        //     &:nth-child(3) {
+
+        //         top: 10%;
+        //         left: -11%;
+
+        //         // transform: rotate(-42.7deg);
+        //     }
+
+        //     &:nth-child(4) {
+
+        //         bottom: 21%;
+        //         left: 1%;
+        //         // transform: rotate(54.3deg);
+        //     }
+
+        //     &:nth-child(5) {
+        //         right: 3%;
+        //         bottom: 25%;
+        //         // transform: rotate(-117.7deg);
+        //     }
+
+        //     &:nth-child(6) {
+        //         top: 8%;
+        //         right: -10%;
+        //         // transform: rotate(159.3deg);
+        //     }
+        // }
+
+    }
+
+    .use {
+        &__wrap-content {
+            padding: 60px 0 60px 15px;
+        }
+        &__wrap-text {
+            h3 {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 28px;
+            }
+        }
+        &__description {
+           
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+
+}
+
+@include mq('tablet-wide') {}
+
+@include mq('tablet') {}
+
+@include mq('tablet-small') {}
+
+@include mq('phablet') {}
+
+@include mq('phone-wide') {}
+
+@include mq('phone') {}
