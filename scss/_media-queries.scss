@@ -4,7 +4,7 @@
     main.container {
         max-width: 100%;
     }
-    
+
 }
 
 @include mq('desktop', max) {
@@ -217,29 +217,34 @@
         h2 {
             text-align: left;
         }
+
         &__wrap {
             max-width: 585px;
             margin-left: auto;
-                padding: 60px 15px 60px 0;
+            padding: 60px 15px 60px 0;
         }
 
         &__items {
             display: block;
         }
+
         &__item {
             margin-bottom: 40px;
         }
+
         &__icon {
             max-width: 90px;
             max-height: 90px;
             margin-right: 25px;
         }
+
         &__description {
             max-width: 58%;
-           font-size: 16px;
-           line-height: 19px;
-           flex-basis: 59%;
+            font-size: 16px;
+            line-height: 19px;
+            flex-basis: 59%;
         }
+
         &__photo-field {
             max-width: unset;
             height: unset;
@@ -250,73 +255,177 @@
 
     .use {
         padding: 0 0 104px 0;
-         &__item:nth-child(even) {
-             padding-left: 50px;
-         }
-         &__wrap-content{
+
+        &__item:nth-child(even) {
+            padding-left: 50px;
+        }
+
+        &__wrap-content {
             max-width: 435px;
-         }
-         &__board {
-             width: 100%;
+        }
+
+        &__board {
+            width: 100%;
+
             img:nth-child(1) {
-                   max-width: 370px;
-                   position: absolute;
-                   height: 674px;
-                   left: 1%;
-                   bottom: 15%;
-                   transform: rotate(-11.06deg);
+                max-width: 370px;
+                position: absolute;
+                height: 674px;
+                left: 1%;
+                bottom: 15%;
+                transform: rotate(-11.06deg);
 
             }
-         }
-         &__wrap-content-text {
-             max-width: 72%;
-             min-width: 40%;
-             h3 {
-                 font-weight: 400;
-                 max-width: 90%;
-             }
-         }
+        }
+
+        &__wrap-content-text {
+            max-width: 72%;
+            min-width: 40%;
+
+            h3 {
+                font-weight: 400;
+                max-width: 90%;
+            }
+        }
+
+        &__wrap-order {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__wrap-text {
+            margin: 0 0 30px 0;
+        }
     }
 
     .photo-breadpack {
         &__use {
-            	&:nth-child(2) {
+            &:nth-child(2) {
 
-            	    top: -3%;
-            	    left: -36%;
+                top: -3%;
+                left: -36%;
 
-            	    // transform: rotate(29.3deg);
-            	}
+                // transform: rotate(29.3deg);
+            }
 
-            	&:nth-child(3) {
+            &:nth-child(3) {
 
-            	    top: 23%;
-            	    left: -24%;
+                top: 23%;
+                left: -24%;
 
-            	    // transform: rotate(-42.7deg);
-            	}
+                // transform: rotate(-42.7deg);
+            }
 
-            	&:nth-child(4) {
+            &:nth-child(4) {
 
-            	    bottom: 7%;
-            	    left: 0%;
-            	    // transform: rotate(54.3deg);
-            	}
+                bottom: 7%;
+                left: 0%;
+                // transform: rotate(54.3deg);
+            }
 
-            	&:nth-child(5) {
-            	        right: -51%;
-            	        bottom: 30%;
-            	    // transform: rotate(-117.7deg);
-            	}
+            &:nth-child(5) {
+                right: -51%;
+                bottom: 30%;
+                // transform: rotate(-117.7deg);
+            }
 
-            	&:nth-child(6) {
-            	   top: 4%;
-            	   right: -44%;
-            	    // transform: rotate(159.3deg);
-            	}
+            &:nth-child(6) {
+                top: 4%;
+                right: -44%;
+                // transform: rotate(159.3deg);
+            }
         }
     }
-   
+
+    .video {
+        video {
+            max-width: 570px;
+            height: auto;
+        }
+
+        &__controls {
+            max-width: 690px;
+            transform: translate(2%, 100%);
+        }
+    }
+
+    .capabilities {
+        &__board {
+            transform: scale(.6);
+
+        }
+
+        &__breadpack {
+
+            &:nth-child(3) {
+                top: 20%;
+                left: -5%;
+            }
+
+            &:nth-child(4) {
+
+                bottom: 28%;
+                right: 20%;
+            }
+
+            &:nth-child(5) {
+                max-width: 361px;
+                top: 17%;
+                right: -5%;
+            }
+
+        }
+
+        &__description {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: center;
+        }
+
+        &__items {
+            position: relative;
+        }
+
+        &__item {
+            &:nth-child(1) {
+                    margin: 0 0 0 -55%;
+                    .capabilities__description {
+                        text-align: justify;
+                    }
+
+                    .capabilities__item-arrow {
+                        
+                    }
+                    
+            }
+            &:nth-child(2) {
+
+                position: absolute;
+                bottom: 30%;
+                left: -50%;
+                transform: translate(0, 100%);
+                .capabilities__item-arrow {
+
+                }
+            }
+            &:nth-child(3) {
+                margin: 0;
+                position: absolute;
+                transform: translate(-100%, 50%);
+                left: -90%;
+                bottom: -13%;
+                .capabilities__item-arrow {
+
+                }
+            }
+        }
+
+        
+    }
+
+
 }
 
 @include mq('tablet-small') {}

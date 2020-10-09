@@ -1995,6 +1995,16 @@ footer {
       .use__wrap-content-text h3 {
         font-weight: 400;
         max-width: 90%; }
+    .use__wrap-order {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+    .use__wrap-text {
+      margin: 0 0 30px 0; }
   .photo-breadpack__use:nth-child(2) {
     top: -3%;
     left: -36%; }
@@ -2009,4 +2019,57 @@ footer {
     bottom: 30%; }
   .photo-breadpack__use:nth-child(6) {
     top: 4%;
-    right: -44%; } }
+    right: -44%; }
+  .video video {
+    max-width: 570px;
+    height: auto; }
+  .video__controls {
+    max-width: 690px;
+    -webkit-transform: translate(2%, 100%);
+    -ms-transform: translate(2%, 100%);
+    -o-transform: translate(2%, 100%);
+    transform: translate(2%, 100%); }
+  .capabilities__board {
+    -webkit-transform: scale(0.6);
+    -ms-transform: scale(0.6);
+    -o-transform: scale(0.6);
+    transform: scale(0.6); }
+  .capabilities__breadpack:nth-child(3) {
+    top: 20%;
+    left: -5%; }
+  .capabilities__breadpack:nth-child(4) {
+    bottom: 28%;
+    right: 20%; }
+  .capabilities__breadpack:nth-child(5) {
+    max-width: 361px;
+    top: 17%;
+    right: -5%; }
+  .capabilities__description {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center; }
+  .capabilities__items {
+    position: relative; }
+  .capabilities__item:nth-child(1) {
+    margin: 0 0 0 -55%; }
+    .capabilities__item:nth-child(1) .capabilities__description {
+      text-align: justify; }
+  .capabilities__item:nth-child(2) {
+    position: absolute;
+    bottom: 30%;
+    left: -50%;
+    -webkit-transform: translate(0, 100%);
+    -ms-transform: translate(0, 100%);
+    -o-transform: translate(0, 100%);
+    transform: translate(0, 100%); }
+  .capabilities__item:nth-child(3) {
+    margin: 0;
+    position: absolute;
+    -webkit-transform: translate(-100%, 50%);
+    -ms-transform: translate(-100%, 50%);
+    -o-transform: translate(-100%, 50%);
+    transform: translate(-100%, 50%);
+    left: -90%;
+    bottom: -13%; } }
