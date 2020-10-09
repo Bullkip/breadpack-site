@@ -60,7 +60,7 @@ $breakpoints: ("phone": 320px,
 		$width: map_get($breakpoints, $width);
 
 		@if $type==max {
-			$width: $width - 1px;
+			$width: $width;
 		}
 
 		@media only screen and (#{$type}-width: $width) {

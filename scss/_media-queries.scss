@@ -350,6 +350,8 @@
     }
 
     .capabilities {
+        padding: 0 0 350px 0;
+
         &__board {
             transform: scale(.6);
 
@@ -358,19 +360,19 @@
         &__breadpack {
 
             &:nth-child(3) {
-                top: 20%;
+                top: 35%;
                 left: -5%;
             }
 
             &:nth-child(4) {
 
-                bottom: 28%;
+                bottom: -6%;
                 right: 20%;
             }
 
             &:nth-child(5) {
                 max-width: 361px;
-                top: 17%;
+                top: 27%;
                 right: -5%;
             }
 
@@ -390,40 +392,176 @@
 
         &__item {
             &:nth-child(1) {
-                    margin: 0 0 0 -55%;
-                    .capabilities__description {
-                        text-align: justify;
-                    }
+                margin: 0 0 0 -55%;
 
-                    .capabilities__item-arrow {
-                        
-                    }
-                    
+                .capabilities__description {
+                    text-align: center;
+                }
+
+                img.capabilities__item-arrow {
+                    top: 35%;
+                    transform: matrix(0.9, -0.43, -0.43, -0.9, 0, 0) rotateX(180deg) rotateZ(47deg);
+                    max-width: 50%;
+                }
+
             }
+
             &:nth-child(2) {
 
                 position: absolute;
                 bottom: 30%;
                 left: -50%;
                 transform: translate(0, 100%);
-                .capabilities__item-arrow {
 
+                img.capabilities__item-arrow {
+                    max-width: 50%;
+                    top: -50%;
+                    left: 6%;
+                    transform: rotateX(170deg) rotateZ(-20deg);
                 }
             }
+
             &:nth-child(3) {
                 margin: 0;
                 position: absolute;
                 transform: translate(-100%, 50%);
                 left: -90%;
                 bottom: -13%;
-                .capabilities__item-arrow {
 
+                img.capabilities__item-arrow {
+                    transform: rotateX(0deg) rotateZ(170deg) rotateY(70deg);
+                    left: 60%;
+                    top: -23%;
+                    max-width: 70%;
                 }
             }
         }
 
-        
+
     }
+
+    .breadpack-offer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 40px 0 40px 60px;
+        max-width: 690px;
+
+        &__text {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 28px;
+            margin-bottom: 20px;
+        }
+
+        &__img {
+            transform: scale(.9);
+            top: -17%;
+            right: -5%;
+        }
+    }
+
+    .numbers {
+        &__wrap {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 28px;
+            background-size: 100% 100%;
+
+            span {
+                font-size: 24px;
+                line-height: 28px;
+                padding: 0 0 40px 0
+            }
+        }
+
+        &__table td {
+            padding: 0px 60px;
+        }
+
+        &__counter {
+            flex-wrap: wrap;
+
+            &-item {
+                flex-basis: 45%;
+
+                &:last-child {
+                    margin-top: 120px;
+                }
+            }
+
+            &-tagline {
+                margin: 0 auto;
+                max-width: 80%;
+            }
+        }
+
+    }
+
+    .about {
+        &__text {
+            &:nth-child(1) {
+
+                max-width: 60%;
+                align-self: flex-start;
+            }
+
+            &:nth-child(2) {
+                max-width: 92%;
+                align-self: flex-end;
+
+            }
+        }
+
+        &__text-wrap {
+            padding: 50px 0 50px 60px;
+            flex-direction: column;
+            max-width: 95%;
+            margin: 0 auto 240px;
+
+        }
+
+        &__wrap {
+            padding: 0;
+            max-width: 95%;
+            margin: 0 auto;
+        }
+
+        &__item {
+            max-width: 80%;
+
+            &:nth-child(1) {
+                align-self: flex-start;
+                margin-bottom: 225px;
+
+            }
+
+            &:nth-child(2) {
+                align-self: flex-end;
+
+            }
+        }
+    }
+
+    .blog {
+        &__subscription-wrap {
+            padding: 50px 60px;
+        }
+
+        &__subscription-form {
+            flex-direction: column;
+            align-items: flex-end;
+            .blog__subscription-col {
+                margin-bottom: 30px;
+            }
+        }
+        &__subscription-text {
+                max-width: 44%;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 24px;
+        }
+    }
+
 
 
 }
