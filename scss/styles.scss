@@ -6,7 +6,9 @@
 
 %container-center {
 	margin: 0 auto;
-}
+	width: 90%;
+};
+$height:5em;
 
 * {
 	box-sizing: border-box;
@@ -25,7 +27,7 @@ body {
 	color: $black-green;
 	min-height: 100%;
 	background-color: #E5E5E5;
-	overflow-x: hidden;
+
 }
 
 a {
@@ -37,16 +39,18 @@ a {
 
 .container {
 	max-width: 1366px;
+
 	@extend %container-center;
 
 	&__main-content {
-		max-width: 1100px;
+		max-width: 1140px;
+
 		@extend %container-center;
 	}
 }
 
 header {
-	position: fixed;
+	position: sticky;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -114,6 +118,7 @@ header {
 					font-size: 16px;
 					line-height: 19px;
 					margin-bottom: 30px;
+
 					&:hover {
 						color: $green-salat
 					}
@@ -156,7 +161,7 @@ header {
 		// text-transform: uppercase;
 		font-weight: 500;
 
-	
+
 
 	}
 
@@ -332,6 +337,7 @@ header {
 
 	& svg {
 		position: absolute;
+
 		right: 9.33px;
 		// top :0;
 		width: 20px;
@@ -348,6 +354,7 @@ header {
 		background-color: $green2;
 		right: -2px;
 		top: -2px;
+		
 
 	}
 
@@ -360,6 +367,21 @@ header {
 		background-color: $green-salat;
 	}
 
+	&--big {
+			padding: 15px 75px 14px 25px;
+			font-size: 16px;
+			.button-order__icon-wrap {
+				padding: 25px;
+			}
+			 svg {
+				 
+				 width: 25px;
+				 height: 25px;
+				 right:0;
+				 top:0;
+				 transform: translate(-45%,45%);
+			 }
+	}
 }
 
 
@@ -369,25 +391,25 @@ main {
 	background-size: cover;
 	background-attachment: fixed;
 	filter: drop-shadow(0px 4px 30px rgba(0, 0, 0, 0.15));
-	padding: 165px 0 0 0;
+	
 }
 
 section {
 	&:before {
-		display: block;
+		display: inline-block;
 		content: "";
-		height: 85px;
-		margin: -70px 0 0;
+		height: $height;
+		margin-top: -$height;
 	}
 }
 
 .first {
 	// margin: 0 0 130px 128px;
-	padding: 0 0 130px 0;
+	padding: 130px 0 130px 0;
 	position: relative;
 
 	& h1 {
-		max-width: 56%;
+		max-width: 53%;
 		font-family: 'Raleway';
 		font-style: normal;
 		font-weight: 500;
@@ -417,7 +439,7 @@ section {
 
 
 	&__wrap-breadpack {
-		    margin: -11% -10% 0 0;
+		margin: -11% -8% 0 0;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -427,7 +449,7 @@ section {
 		// margin: 95px -90px 0 0;
 		position: absolute;
 		top: 50%;
-		right: 15%;
+		right: 23%;
 		transform: translate(-50%, -50%)
 	}
 
@@ -529,9 +551,14 @@ h2 {
 		box-shadow: 0px 15px 10px rgba(132, 132, 132, 0.1);
 		border-radius: 20px;
 		position: relative;
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+
 	}
 
 	&__items {
+		flex-basis: 55%;
 		padding: 0;
 		margin: 0;
 		display: flex;
@@ -543,7 +570,7 @@ h2 {
 	&__item {
 		display: flex;
 		flex-direction: row;
-		justify-content: flex-end;
+		justify-content: space-between;
 		margin-bottom: 40px;
 
 		&:last-child {
@@ -564,7 +591,6 @@ h2 {
 	}
 
 	&__description {
-		flex-basis: 42%;
 		margin: 0;
 		padding: 0;
 		font-family: Roboto;
@@ -575,16 +601,30 @@ h2 {
 
 	}
 
+	// &__photo-wrap {
+	// 	max-width: 711px;
+	// 	height: auto;
+	// position: absolute;
+	// 	left: -15%;
+	// 	bottom: 0;
+	// 	border-radius: 20px;
+	// // 	background-image: url(../img/2_экран_P1010413.png);
+	// // 	background-position: center;
+	// // 	background-size: cover;
+	// // 	background-repeat: no-repeat;
+	// }
+
 	&__photo-field {
-		max-width: 700px;
+		max-width: 100%;
+		height: auto;
 		height: 840px;
 		position: absolute;
-		// top: -60px;
 		left: -251px;
 		bottom: 0;
-
 		filter: drop-shadow(4px 4px 20px rgba(0, 0, 0, 0.25));
 		border-radius: 20px;
+
+		
 	}
 
 	&__photo-spikelets {
@@ -620,7 +660,7 @@ h2 {
 		&:nth-child(2) {
 
 			top: -10%;
-			left: 24%;
+			left: 33%;
 
 			// transform: rotate(29.3deg);
 		}
@@ -628,26 +668,26 @@ h2 {
 		&:nth-child(3) {
 
 			top: 10%;
-			left: -11%;
+			left: -5%;
 
 			// transform: rotate(-42.7deg);
 		}
 
 		&:nth-child(4) {
 
-			bottom: 21%;
-			left: 1%;
+			bottom: 0%;
+			left:-5%;
 			// transform: rotate(54.3deg);
 		}
 
 		&:nth-child(5) {
-			right: 3%;
-			bottom: 25%;
+			right: 10%;
+			bottom: -5%;
 			// transform: rotate(-117.7deg);
 		}
 
 		&:nth-child(6) {
-			top: 8%;
+			top: 20%;
 			right: -10%;
 			// transform: rotate(159.3deg);
 		}
@@ -656,7 +696,7 @@ h2 {
 }
 
 .use {
-	padding: 0 0 104px 68px;
+	padding: 0 0 104px 0;
 
 	&__wrap-main {
 		display: flex;
@@ -666,15 +706,19 @@ h2 {
 	&__wrap-content {
 		max-width: 695px;
 		padding: 60px 0 60px 60px;
-		margin: 0 0 100px 0;
+		margin: 0 0 100px -40px;
 		background: rgba(255, 255, 255, 0.5);
 		box-shadow: 0px 15px 10px rgba(132, 132, 132, 0.1);
 		border-radius: 20px;
 
 		// position: relative;
 		&-text {
-			max-width: 75%;
+			max-width: 70%;
 			min-width: 50%;
+
+			h3 {
+				margin-top: 0;
+			}
 
 			span {
 				display: flex;
@@ -699,7 +743,7 @@ h2 {
 		}
 
 		&:last-child {
-			margin: 0 -80px 0 0;
+			margin: 0 -95px 0 0;
 		}
 	}
 
@@ -724,14 +768,17 @@ h2 {
 		// top: 2%;
 		// right: -75%;
 		position: relative;
-		left: -6%;
+		left: -9%;
+		margin-right: -13%;
+		transform: rotate(-14.64deg);
+		height: max-content;
 
 		img {
 			&:nth-child(1) {
 				max-width: 100%;
-				height: 630px;
+				height: 643px;
 				filter: drop-shadow(0px 20px 20px rgba(0, 0, 0, 0.5));
-				transform: rotate(-14.64deg);
+				
 			}
 
 		}
@@ -1049,7 +1096,7 @@ h3 {
 .breadpack-offer {
 
 	max-width: 1100px;
-	margin-bottom: 218px;
+	margin: 0 auto 218px;
 	padding: 44px 0 44px 65px;
 	display: flex;
 	flex-direction: row;
@@ -1126,6 +1173,7 @@ h3 {
 		// flex-wrap: nowrap;
 
 		padding-bottom: 54px;
+		    // border-spacing: 25px;
 
 
 
@@ -1191,17 +1239,17 @@ h3 {
 		max-width: 300px;
 		height: auto;
 		position: absolute;
-		top: 20%;
+		top: 28%;
 
 		&:nth-of-type(1) {
 
-			left: -18%;
+			left: -16%;
 
 		}
 
 		&:nth-of-type(2) {
 
-			right: -18%;
+			right: -16%;
 		}
 	}
 
@@ -1234,7 +1282,7 @@ h3 {
 
 			&:nth-child(2) img {
 				max-width: 316px;
-				margin-top: -36%;
+				margin-top: -30%;
 
 			}
 
@@ -1413,6 +1461,17 @@ h3 {
 		font-weight: normal;
 		font-size: 18px;
 		line-height: 21px;
+		position:relative;
+		&:before {
+			display: inline-block;
+			content: url(../img/quotes.svg);
+			width: 20px;
+			height: 17px;
+			position: absolute;
+			top: -10%;
+			left: -10%;
+
+		}
 	}
 
 	&__contact {
@@ -1471,6 +1530,7 @@ h3 {
 		}
 
 		&-text {
+			    flex-basis: 65%;
 			font-style: normal;
 			font-weight: 500;
 			font-size: 22px;
