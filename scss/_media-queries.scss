@@ -778,7 +778,7 @@
 
         &__wrap {
             justify-content: space-between;
-            
+
         }
 
         &__text {
@@ -787,36 +787,188 @@
             text-align: center;
         }
     }
-     footer .footer__contact-item:first-child {
-          margin-right: 0px;
-     }
-     footer .footer__wrap {
-         flex-basis: 80%;
-     }
+
+    footer .footer__contact-item:first-child {
+        margin-right: 0px;
+    }
+
+    footer .footer__wrap {
+        flex-basis: 80%;
+    }
+
     .footer {
         &__wrap {
             padding-top: 10px;
         }
+
         &__contact {
             flex-basis: 70%;
             justify-content: space-between;
         }
+
         &__links {
             flex-wrap: wrap;
             max-width: 95%;
+
             &-item {
                 margin-bottom: 20px;
             }
         }
-       
+
     }
 
 }
 
-@include mq('tablet-small') {}
+@include mq('tablet-small', max) {
 
-@include mq('phablet') {}
 
-@include mq('phone-wide') {}
+
+
+    @include mq('phablet') {}
+
+    @include mq('phone-wide', max) {
+
+        .header-nav__tel,
+        .header-nav__mail {
+            display: none;
+        }
+
+        footer {
+            display: none;
+        }
+
+        .header-nav_lang {
+            display: none;
+        }
+
+        .header-nav__col:nth-child(2) {
+            flex-basis: 75%;
+        }
+
+        .first {
+            h1 {
+                font-weight: 500;
+                font-size: 22px;
+                line-height: 26px;
+                max-width: 85%;
+            }
+
+            &__wrap-main {
+                flex-direction: column-reverse;
+                align-items: center;
+                p {
+                    text-align: center;
+                }
+            }
+
+            &__wrap-breadpack {
+                margin: -45% 0% 0 0;
+            }
+
+            &__img {
+                transform: scale(.65);
+                right: -15%;
+            }
+
+            &__keywords {
+                top: 50%;
+                right: -22%;
+                left: unset;
+                transform: translate(-100%, -50%)
+            }
+
+            &__keyword {
+
+                &:nth-child(1),
+                &:nth-child(2),
+                &:nth-child(3),
+                &:nth-child(4) {
+                    margin-left: unset;
+                }
+
+                &:nth-child(3),
+                &:nth-child(4) {
+                    position: unset;
+                    left: unset;
+                }
+
+                &:nth-child(3) {
+                    top: unset;
+
+                }
+
+                &:nth-child(4) {
+                    bottom: unset;
+
+                }
+
+                &:nth-child(2) {
+                    margin-left: 25px;
+                }
+
+                &:nth-child(3) {
+                    margin-left: 75px;
+                }
+
+                &:nth-child(4) {
+                    margin-left: 130px;
+                }
+
+
+            }
+
+            &__text {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 16px;
+            }
+        }
+        .advantages {
+            &__h2-wrap{
+                width: 100%;
+                    background: rgba(255, 255, 255, 0.5);
+                
+            }
+            
+            h2 {
+                margin-bottom: 0;
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 35px;
+                text-align: center;
+                margin: 60px 0 50px 0;
+            }
+            &__wrap {
+                padding: 0 0 60px 0;
+                border-top-right-radius: unset;
+                border-top-left-radius: unset;
+            }
+            .container__main-content {
+                margin: 0;
+                width: 100%;
+            }
+            picture {
+                display: none;
+            }
+            &__item {
+                flex-direction: column;
+                
+               
+            }
+            &__icon {
+                 width: 120px;
+                 height: 120px;
+                 max-width: 100%;
+                 max-height: unset;
+                 align-self: center;
+                 margin: 0;
+             }
+             &__description {
+                 max-width: 90%;
+                 margin: 0 auto;
+             }
+        }
+    }
+}
 
 @include mq('phone') {}
